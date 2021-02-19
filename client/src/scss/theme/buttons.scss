@@ -1,0 +1,21 @@
+.btn {
+  @include button-variant($blue, $blue, $blue, $blue);
+
+  box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1),
+    0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba($black, 0.07),
+    0 1px 2px 0 rgba($black, 0.08);
+
+  @include hover-focus {
+    &:not(.disabled) {
+      color: darken($white, 8.5%) !important;
+      box-shadow: 0 0 0 1px rgba(43, 45, 80, 0.1),
+        0 2px 5px 0 rgba(43, 45, 80, 0.1), 0 3px 9px 0 rgba(43, 45, 80, 0.08),
+        0 1px 1.5px 0 rgba($black, 0.08), 0 1px 2px 0 rgba($black, 0.08);
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+    color: darken($white, 8.5%) !important;
+  }
+}
