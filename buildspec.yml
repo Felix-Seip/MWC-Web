@@ -6,7 +6,7 @@ phases:
       nodejs: 12
   build:
     commands:
-      - cd frontend_web/client
+      - cd ./client
       - npm install
       - npm run build
       - cd ..
@@ -15,4 +15,3 @@ phases:
 artifacts:
   files:
     - "./**/**"
-  base-directory: "frontend_web"
